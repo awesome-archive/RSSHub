@@ -1,229 +1,46 @@
 ---
-search: zh-Hans
+sidebarDepth: 0
 ---
 
-# RSSHub
+# 介绍
 
-🍭 使用 RSS 连接全世界
-
-RSSHub 是一个轻量、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源
-
-## 参与我们
-
-如果有任何想法或需求，可以在 [issue](https://github.com/DIYgod/RSSHub/issues) 中告诉我们，同时我们欢迎各种 pull requests
-
-可以通过以下途径参与讨论：
-
-- [Telegram 群](https://t.me/rsshub)
-- [QQ 群](https://jq.qq.com/?_wv=1027&k=5kIvhps): 711799039
-
-## 使用
-
-域名为 rss.prprpr.me，缓存时间 5 分钟
-
-下面是目前支持的内容
-
-### bilibili
-
-#### 番剧
-
-举例: https://rss.prprpr.me/bilibili/bangumi/21680
-
-路由: `/bilibili/bangumi/:seasonid`
-
-参数: seasonid，番剧 id，可在番剧主页 URL 中找到
-
-#### UP 主投稿
-
-举例: https://rss.prprpr.me/bilibili/user/video/2267573
-
-路由: `/bilibili/user/video/:uid`
-
-参数: uid，用户 id，可在 UP 主主页中找到
-
-#### UP 主动态
-
-举例: https://rss.prprpr.me/bilibili/user/dynamic/2267573
-
-路由: `/bilibili/user/dynamic/:uid`
-
-参数: uid，用户 id，可在 UP 主主页中找到
-
-#### UP 主收藏夹
-
-举例: https://rss.prprpr.me/bilibili/user/fav/2267573
-
-路由: `/bilibili/user/fav/:uid`
-
-参数: uid，用户 id，可在 UP 主主页中找到
-
-#### UP 主投币视频
-
-举例: https://rss.prprpr.me/bilibili/user/coin/2267573
-
-路由: `/bilibili/user/coin/:uid`
-
-参数: uid，用户 id，可在 UP 主主页中找到
-
-#### 分区视频
-
-举例: https://rss.prprpr.me/bilibili/partion/33
-
-路由: `/bilibili/partion/:tid`
-
-参数: tid，分区 id
-
-动画
-
-| MAD·AMV | MMD·3D | 短片·手书·配音 | 综合   |
-| ------- | ------ | -------- | ---- |
-| 24      | 25     | 47       | 27   |
-
-番剧
-
-| 连载动画 | 完结动画 | 资讯   | 官方延伸 |
-| ---- | ---- | ---- | ---- |
-| 33   | 32   | 51   | 152  |
-
-国创
-
-| 国产动画 | 国产原创相关 | 布袋戏  | 资讯   |
-| ---- | ------ | ---- | ---- |
-| 153  | 168    | 169  | 170  |
-
-音乐
-
-| 原创音乐 | 翻唱   | VOCALOID·UTAU | 演奏   | 三次元音乐 | OP/ED/OST | 音乐选集 |
-| ---- | ---- | ------------- | ---- | ----- | --------- | ---- |
-| 28   | 31   | 30            | 59   | 29    | 54        | 130  |
-
-舞蹈
-
-| 宅舞   | 三次元舞蹈 | 舞蹈教程 |
-| ---- | ----- | ---- |
-| 20   | 154   | 156  |
-
-游戏
-
-| 单机游戏 | 电子竞技 | 手机游戏 | 网络游戏 | 桌游棋牌 | GMV  | 音游   | Mugen |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
-| 17   | 171  | 172  | 65   | 173  | 121  | 136  | 19    |
-
-科技
-
-| 趣味科普人文 | 野生技术协会 | 演讲·公开课 | 星海   | 数码   | 机械   | 汽车   |
-| ------ | ------ | ------ | ---- | ---- | ---- | ---- |
-| 124    | 122    | 39     | 96   | 95   | 98   | 176  |
-
-生活
-
-| 搞笑   | 日常   | 美食圈  | 动物圈  | 手工   | 绘画   | ASMR | 运动   | 其他   |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| 138  | 21   | 76   | 75   | 161  | 162  | 175  | 163  | 174  |
-
-鬼畜
-
-| 鬼畜调教 | 音MAD | 人力VOCALOID | 教程演示 |
-| ---- | ---- | ---------- | ---- |
-| 22   | 26   | 126        | 127  |
-
-s
-
-| 美妆   | 服饰   | 健身   | 资讯   |
-| ---- | ---- | ---- | ---- |
-| 157  | 158  | 164  | 159  |
-
-广告
-
-| 广告   |
-| ---- |
-| 166  |
-
-娱乐
-
-| 综艺   | 明星   | Korea相关 |
-| ---- | ---- | ------- |
-| 71   | 137  | 131     |
-
-影视
-
-| 影视杂谈 | 影视剪辑 | 短片   | 预告·资讯 | 特摄   |
-| ---- | ---- | ---- | ----- | ---- |
-| 182  | 183  | 85   | 184   | 86   |
-
-
-### 微博
-
-#### 博主
-
-举例: https://rss.prprpr.me/weibo/user/3306934123
-
-路由: `/weibo/user/:uid`
-
-参数: uid，用户 id，博主主页打开控制台执行 `/uid=(\d+)/. exec(document.querySelector('.opt_box .btn_bed').getAttribute('action-data'))[1]` 获取
-
-### 网易云音乐
-
-#### 歌单
-
-举例: https://rss.prprpr.me/ncm/playlist/35798529
-
-路由: `/ncm/playlist/:id`
-
-参数: id，歌单 id，可在歌单页 URL 中找到
-
-### 掘金
-
-#### 分类
-
-举例: https://rss.prprpr.me/juejin/category/frontend
-
-路由: `/juejin/category/:category`
-
-参数: category，分类名
-
-| 前端       | Android | iOS  | 后端      | 设计     | 产品      | 工具资源    | 阅读      | 人工智能 |
-| -------- | ------- | ---- | ------- | ------ | ------- | ------- | ------- | ---- |
-| frontend | android | ios  | backend | design | product | freebie | article | ai   |
-
-### 自如
-
-#### 房源
-
-举例: https://rss.prprpr.me/ziroom/room/sh/1/2/五角场
-
-路由: `/ziroom/room/:city/:iswhole/:room/:keyword`
-
-参数
-
-city: 城市，北京 bj；上海 sh；深圳 sz；杭州 hz；南京 nj；广州 gz；成都 cd；武汉 wh；天津 tj
-
-iswhole: 是否整租
-
-room: 房间数
-
-keyword: 关键词
-
-### 快递
-
-<p class="warning">
-  快递送达后请及时取消订阅，以免不必要地浪费服务器资源
+<p align="center" class="logo-img">
+    <img src="/logo.png" alt="RSSHub" width="100">
 </p>
+<h1 align="center" class="logo-text">RSSHub</h1>
 
-举例: https://rss.prprpr.me/express/youzhengguoji/CV054432809US
+> 🍰 万物皆可 RSS
 
-路由: `/express/:company/:number`
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?style=flat-square)](https://t.me/rsshub)
+[![build status](https://img.shields.io/travis/DIYgod/RSSHub/master.svg?style=flat-square)](https://travis-ci.org/DIYgod/RSSHub)
+[![Test coverage](https://img.shields.io/codecov/c/github/DIYgod/RSSHub.svg?style=flat-square)](https://codecov.io/github/DIYgod/RSSHub?branch=master)
 
-参数
+RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源。RSSHub 借助于开源社区的力量快速发展中，目前已适配数百家网站的上千项内容
 
-company: 快递公司代码，参考 [API URL 所支持的快递公司及参数说明](https://www.kuaidi100.com/download/api_kuaidi100_com%2820140729%29.doc)
+可以配合浏览器扩展 [RSSHub Radar](https://github.com/DIYgod/RSSHub-Radar) 食用
 
-number: 快递单号
+[Telegram 群](https://t.me/rsshub) \| [Telegram 频道](https://t.me/awesomeRSSHub)
 
-## 搭建
+## 鸣谢
 
-依赖：
+### Special Sponsors
 
-- Redis
+<a style="margin-right: 10px;" href="https://rixcloud.app/rsshub" target="_blank"><img alt="rixCloud" height="60px" src="https://cn-south-17-rsshub-16857749.oss.dogecdn.com/rixcloud.png"></a>
+<a style="margin-right: 10px;" href="https://angelia.codeeer.com" target="_blank"><img alt="期待" height="60px" src="https://cn-south-17-rsshub-16857749.oss.dogecdn.com/angelia.png"></a>
+<a style="margin-right: 10px;margin-left: 10px;" href="http://authing.cn" target="_blank"><img alt="Authing" height="55px" src="https://cn-south-17-rsshub-16857749.oss.dogecdn.com/authing.png"></a>
 
-- Node.js
+### Sponsors
+
+[Sayori Studio](https://t.me/SayoriStudio) . [Sion Kazama](https://blog.sion.moe) . [琚致远](https://www.shaoyaoju.org/) . [Rolly RSS 阅读器](https://www.coolapk.com/apk/239500) . [mokeyjay](https://www.mokeyjay.com/) . [tkaray](https://rayray.moe/) . [NeverBehave](https://never.pet/) . [萌开源联盟](https://www.moeunion.com) . [hooke007](https://github.com/hooke007/MPV_lazy) . [feeds.pub](https://feeds.pub)
+
+[![](https://opencollective.com/static/images/become_sponsor.svg)](/support/)
+
+### Contributors
+
+[![](https://opencollective.com/RSSHub/contributors.svg?width=740)](https://github.com/DIYgod/RSSHub/graphs/contributors)
+
+Logo designer [sheldonrrr](https://dribbble.com/sheldonrrr)
+
+### Backers
+
+<a href="https://www.cloudflare.com" target="_blank"><img height="50px" src="https://cn-south-17-rsshub-16857749.oss.dogecdn.com/cloudflare.png"></a><a href="https://www.netlify.com" target="_blank" style="margin-left: 60px;"><img height="40px" src="https://cn-south-17-rsshub-16857749.oss.dogecdn.com/netlify.png"></a>
